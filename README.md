@@ -15,9 +15,9 @@
     <br />
     <a href="https://github.com/Los-Malditos-del-i03-Ciclo-V/yven-quantums-optics">Ver demostración</a>
     ·
-    <a href="https://github.com/Geraldow/documentations/issues/new?assignees=&labels=bug&projects=&template=reportar-bug.md">Reportar bug</a>
+    <a href="https://github.com/Los-Malditos-del-i03-Ciclo-V/yven-quantums-optics/issues/new?assignees=&labels=bug%2C+enhancement&projects=&template=reportar-bug-%F0%9F%90%9E.md&title=">Reportar bug</a>
     ·
-    <a href="https://github.com/Geraldow/documentations/issues/new?assignees=&labels=enhancement&projects=&template=solicitar-nueva-caracter%C3%ADstica-%E2%9C%A8.md">Solicitar característica</a>
+    <a href="https://github.com/Los-Malditos-del-i03-Ciclo-V/yven-quantums-optics/issues/new?assignees=&labels=enhancement&projects=&template=solicitar-nueva-caracter%C3%ADstica-%E2%9C%A8.md&title=">Solicitar característica</a>
   </p>
 </div>
 
