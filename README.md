@@ -24,11 +24,11 @@
 <!-- ACERCA DEL PROYECTO -->
 ## Acerca del Proyecto
 <div align="center">
-  <a href="https://github.com/Geraldow/documentations">
-    <img src="https://cdn.dribbble.com/userupload/14912902/file/original-12c002c69215970cd2eaf4824b287a4f.png?resize=700x" alt="Logo">
+  <a href="https://github.com/Los-Malditos-del-i03-Ciclo-V/yven-quantums-optics">
+    <img src="https://i.imgur.com/ZbGfGgk.png" alt="Logo" width="900" height="650">
   </a>
 </div>
-
+<br>
 YQO es un proyecto diseñado para maximizar el flujo de trabajo en el laboratorio, permitiendo realizar análisis precisos y oportunos para mejorar la gestión de recursos financieros y materiales. Este software tiene como objetivo reducir la cantidad de trabajo humano, minimizar los errores de procesamiento de datos y garantizar que los recursos se utilicen de forma eficaz. Está dirigido a un equipo de tres científicos para que les permita analizar los datos de forma eficiente y presentar proyecciones precisas, también ofrece ventajas como generación de reportes y estadísticas.
 
 ### Tecnologías
