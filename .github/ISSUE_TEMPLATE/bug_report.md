@@ -1,38 +1,39 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: "Reportar bug \U0001F41E"
+about: Crea un reporte para ayudarnos a mejorar
 title: ''
-labels: ''
+labels: bug, enhancement
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Describe el bug**
+Una descripción clara y concisa de cuál es el bug.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Para producir**
+Pasos para reproducir el comportamiento
+1. Diríjase a '...'
+2. Hacer clic en '....'
+3. Desplazar hacia abajo hasta '....'
+4. Mirar el error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Comportamiento esperado**
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+Una descripción clara y concisa de lo que se espera que sucediera
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Capturas de pantallas**
+Si en caso aplica, agregar capturas de pantalla para ayudar a explicar el problema.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Escritorio (Completar la siguiente información por favor)**
+- Sistema operativo: [e.j. Windows 11]
+- Navegador [e.j. Google Chrome, Microsoft Edge]
+- Versión [e.j. 22H2]
 
-**Additional context**
-Add any other context about the problem here.
+**Teléfono (Completar la siguiente información por favor):**
+- Dispositivo: [e.g. iPhone6]
+- Sistema operativo: [e.g. iOS8.1]
+- Navegador [e.g. stock browser, safari]
+- Versión [e.g. 22]
+
+**Contexto adicional**
+Agregar aquí cualquier otro contexto acerca del problema.
