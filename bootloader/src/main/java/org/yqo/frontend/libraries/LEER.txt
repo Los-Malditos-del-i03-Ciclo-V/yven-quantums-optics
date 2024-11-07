@@ -1,0 +1,1 @@
+Aquí irán carpetas como tailwind o las que sean necesarios, y dentro de cada uno instalarlo.
