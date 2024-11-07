@@ -7,13 +7,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="yqosys" />
-        <module name="yqo" />
+        <module name="repository" />
+        <module name="service" />
+        <module name="bootloader" />
+        <module name="domain" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="logs" target="21" />
+      <module name="web" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="yqo" options="-parameters" />
+      <module name="bootloader" options="-parameters" />
+      <module name="domain" options="-parameters" />
+      <module name="logs" options="-parameters" />
+      <module name="repository" options="-parameters" />
+      <module name="service" options="-parameters" />
+      <module name="web" options="-parameters" />
+      <module name="yqo" options="" />
     </option>
   </component>
 </project>
