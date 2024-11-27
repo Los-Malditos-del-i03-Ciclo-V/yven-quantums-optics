@@ -101,6 +101,9 @@ A continuación, se detalla el proceso para clonar, configurar e instalar el pro
    
 9. Accede a la aplicación desde la URL http://localhost:8001
 
+### Base de datos
+- https://pastebin.com/UgHGStU2
+
 ### Miembros de equipo
 - <img src="https://i.imgur.com/TszSrEx.jpeg" width="50" height="50"/> [Geraldo Fair Jaramillo Florida](https://github.com/Geraldow)
 - <img src="https://i.imgur.com/iQaXHnb.jpeg" width="50" height="50"/> [Alessandro Miguel Arias Marquina](https://github.com/76287712)
