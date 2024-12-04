@@ -1,4 +1,4 @@
-package pe.edu.yqo;
+package pe.edu.certus.yqo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

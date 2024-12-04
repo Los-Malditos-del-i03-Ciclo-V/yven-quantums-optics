@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f35dca1b-8e5d-4341-9a95-ae735c2766b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bootloader/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/java/org/yqo/boot/Launcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/java/org/yqo/frontend/controller/DashboardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/java/org/yqo/frontend/controller/OperadorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/java/org/yqo/frontend/libraries/LEER.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/resources/templates/dashboard/operator/operators.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/resources/templates/dashboard/operator/views/create-operator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/resources/templates/dashboard/operator/views/edit-operator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/yqo/model/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/yqo/model/operador/entity/OperadorEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/org/yqo/persistence/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/org/yqo/persistence/config/EntityScanConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/org/yqo/persistence/config/JpaConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/org/yqo/persistence/database/tech_viajero_all_commands.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/org/yqo/persistence/database/yqo_all_commands.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/org/yqo/persistence/entity/operador/OperadorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/test/java/org/yqo/persistence/entity/operador/OperadorRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/yqo/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/yqo/contract/ICrudService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/yqo/provider/OperadorServiceImpl.java" beforeDir="false" />
-    </list>
+    <list default="true" id="f35dca1b-8e5d-4341-9a95-ae735c2766b1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,14 +40,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feat/backend-hxa",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/FAIR/OneDrive/Desktop/yven-quantums-optics"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/backend-hxa&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/FAIR/OneDrive/Desktop/yven-quantums-optics&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\FAIR\OneDrive\Desktop\yven-quantums-optics" />

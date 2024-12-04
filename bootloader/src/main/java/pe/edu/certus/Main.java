@@ -1,4 +1,4 @@
-package pe.edu;
+package pe.edu.certus;
 
 public class Main {
     public static void main(String[] args) {
