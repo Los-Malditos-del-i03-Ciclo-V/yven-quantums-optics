@@ -8,14 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="yqosys" />
-        <module name="repository" />
-        <module name="service" />
-        <module name="bootloader" />
-        <module name="domain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="domain" target="21" />
       <module name="logs" target="21" />
+      <module name="operadores" target="21" />
+      <module name="reportes" target="21" />
+      <module name="repository" target="21" />
+      <module name="service" target="21" />
+      <module name="solicitudes" target="21" />
       <module name="web" target="21" />
     </bytecodeTargetLevel>
   </component>
@@ -24,8 +26,11 @@
       <module name="bootloader" options="-parameters" />
       <module name="domain" options="-parameters" />
       <module name="logs" options="-parameters" />
+      <module name="operadores" options="-parameters" />
+      <module name="reportes" options="-parameters" />
       <module name="repository" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="solicitudes" options="-parameters" />
       <module name="web" options="-parameters" />
       <module name="yqo" options="" />
     </option>
