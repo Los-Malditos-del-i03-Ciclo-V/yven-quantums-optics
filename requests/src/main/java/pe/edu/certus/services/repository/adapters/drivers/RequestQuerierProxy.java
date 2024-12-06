@@ -1,4 +1,4 @@
-package pe.edu.certus.services.repository.adapters.drivens;
+package pe.edu.certus.services.repository.adapters.drivers;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +21,10 @@ public class RequestQuerierProxy implements ForManagingRequest {
     @Override
     @Transactional
     public void saveRequest(RequestModel requestModel) {
-        forQueryingRequest.save(RequestMapper.toEntity(requestModel));
+        // Para nuevas entidades, asegurarse de que el ID sea null
+        requestModel.setId(null);
+        RequestEntity entity = RequestMapper.toEntity(requestModel);
+        forQueryingRequest.save(entity);
     }
 
     @Override

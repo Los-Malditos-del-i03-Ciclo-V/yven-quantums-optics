@@ -8,7 +8,7 @@ public interface ForManagingRequest {
 
     void saveRequest(RequestModel requestModel);
     List<RequestModel> getAllRequests();
-    RequestModel getRequestById(Long requestModel);
+    RequestModel getRequestById(Long requestId);
     RequestModel updateRequest(RequestModel requestModel);
     void deleteRequestById(Long id);
 

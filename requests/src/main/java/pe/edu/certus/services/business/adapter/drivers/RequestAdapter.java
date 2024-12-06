@@ -1,6 +1,5 @@
 package pe.edu.certus.services.business.adapter.drivers;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.certus.services.business.domain.RequestModel;
@@ -42,7 +41,8 @@ public class RequestAdapter {
             List<RequestWebModel> createdRequests = new ArrayList<>();
             
             for (RequestWebModel requestWebModel : requestWebModels) {
-                if (requestWebModel.category() == null || requestWebModel.description() == null) {
+                if (requestWebModel.category() == null ||
+                        requestWebModel.description() == null) {
                     continue;
                 }
                 

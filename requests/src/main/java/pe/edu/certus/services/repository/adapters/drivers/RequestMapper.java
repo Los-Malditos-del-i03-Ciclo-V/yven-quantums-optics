@@ -1,4 +1,4 @@
-package pe.edu.certus.services.repository.adapters.drivens;
+package pe.edu.certus.services.repository.adapters.drivers;
 
 import lombok.NoArgsConstructor;
 import pe.edu.certus.services.business.domain.RequestModel;
