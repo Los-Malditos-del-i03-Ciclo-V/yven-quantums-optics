@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9f03090-a184-45d7-afae-d606159cad4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/java/pe/edu/certus/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/java/pe/edu/certus/boot/Launcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootloader/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/pe/edu/certus/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/operators/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/operators/src/main/java/pe/edu/certus/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/src/main/java/pe/edu/certus/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/business/adapters/drivens/RequestManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/business/adapters/drivers/RequestAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/business/adapters/drivers/RequestWebConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/business/adapters/drivers/RequestWebModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/business/domain/RequestModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/business/ports/drivens/ForManagingRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/business/ports/drivers/ForRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/repository/SpringAppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/repository/adapters/RequestEntityMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/repository/adapters/RequestQuerierProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/repository/entity/RequestEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests/src/main/java/pe/edu/certus/services/repository/ports/drivers/ForQueryingRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/java/pe/edu/certus/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +16,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;76287712&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vYven/yven-quantums-optics.git&quot;,
+    &quot;accountId&quot;: &quot;f641bd94-7a14-4068-a66d-8d24f597d2d4&quot;
+  }
+}</component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2ppAeMxG4iQnhcPBuPK7lcpgO1z" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -58,10 +44,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.yqo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/FAIR/OneDrive/Desktop/Por ordenar/Projects/yven-quantums-optics/frontend/src/main/resources/templates"
+    "last_opened_file_path": "C:/Users/User/Documents/Current_Cycle/Análisis_dis_de_software/Project/yven-quantums-optics",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -71,19 +61,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="yven-quantums-optics" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="yven-quantums-optics" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="yven-quantums-optics" />
       <option name="ENV_FILES" value="" />
@@ -185,6 +162,19 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="yven-quantums-optics" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="yven-quantums-optics" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
