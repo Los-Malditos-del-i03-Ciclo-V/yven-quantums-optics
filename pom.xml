@@ -22,11 +22,7 @@
 		<developer/>
 	</developers>
     <modules>
-		<module>bootloader</module>
-		<module>reports</module>
-        <module>users</module>
-		<module>requests</module>
-		<module>operators</module>
+		<module>frontend</module>
 		<module>frontend</module>
 	</modules>
     <scm>

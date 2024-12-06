@@ -1,0 +1,103 @@
+:root{
+    --secondary: #3f47e3;
+    --background: #F4F4F4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+}
+.logo{
+    height: 60px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 1rem;
+    height: 100vh;
+    width: 220px;
+    background-color: white;
+}
+
+
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto ;
+    padding: 0;
+}
+
+.list a{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.25em;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 0.25rem;
+}
+
+.list a:hover {
+    /* display: block;
+    padding-bottom: 1rem;
+    color: black;
+    text-decoration: none; */
+    background-color: rgb(233, 232, 232);
+    border-radius: 0.25rem;
+}
+/* .list a.activate{
+    background-color: blue;
+    color:white;
+    border-radius: 0.25rem;
+} */
+ 
+
+.icon{
+
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.5rem;
+}
+
+.logout{
+    text-decoration: none;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.25em;
+
+}
+
+.logout:hover{
+    background-color: rgb(233, 232, 232);
+    color: black;
+    border-radius: 0.25rem;
+    
+}
+
+.navbar{
+    margin-left: 220px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
