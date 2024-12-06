@@ -1,6 +1,8 @@
 package pe.edu.certus.services.business.adapters.drivers;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.certus.services.business.model.OperatorModel;
 import pe.edu.certus.services.business.ports.drivers.ForOperator;
@@ -8,7 +10,7 @@ import pe.edu.certus.services.business.ports.drivers.ForOperator;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("api/v1/operators")
 public class OperatorAdapter {
 
@@ -41,7 +43,7 @@ public class OperatorAdapter {
     public ResponseEntity<List<OperatorWebModel>> createOperators(@RequestBody List<OperatorWebModel> operatorWebModels){
         try {
             List<OperatorWebModel> createdOperators = new ArrayList<>();
-            
+
             for (OperatorWebModel operatorWebModel : operatorWebModels){
                 if (operatorWebModel.name() == null
                         || operatorWebModel.email() == null
@@ -90,7 +92,7 @@ public class OperatorAdapter {
     @PutMapping("/update/{id}")
     public ResponseEntity<OperatorWebModel> updateOperator(@PathVariable Long id, OperatorWebModel operatorWebModel){
         OperatorModel existingOperator = (OperatorModel) forOperator.findOperatorModelById(id);
-        
+
         if (existingOperator == null){
             return ResponseEntity.notFound().build();
         }
@@ -115,5 +117,13 @@ public class OperatorAdapter {
         forOperator.deleteOperatorModelById(id);
 
         return ResponseEntity.ok().build();
+    }
+
+    private static final String OPERATORS_PAGE = "operadores";
+    @GetMapping
+    public String showOperators(Model model) {
+        List<OperatorModel> operators = forOperator.findAllOperatorModel();
+        model.addAttribute("operators", operators);
+        return OPERATORS_PAGE;
     }
 }

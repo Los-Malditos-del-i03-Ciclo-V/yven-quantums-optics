@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/css/operadores.css}">
+    <title>Operadores - Yven Quantum Optics</title>
+</head>
+<body>
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="">
+            <img th:src="@{/img/logo.svg}" class="logo" alt="Logo">
+        </a>
+        <hr>
+        <ul class="list">
+            <li>
+                <a th:href="@{/}" class="">
+                    <img th:src="@{/img/casa1.svg}" alt="Icono" class="icon">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="operadores.html" class="">
+                    <img th:src="@{/img/grafico.png}" alt="" class="icon">
+                    Reportes
+                </a>
+            </li>
+            <li>
+                <a href="operadores.html" class="">
+                    <img th:src="@{/img/user.png}" alt="" class="icon">
+                    Operadores
+                </a>
+            </li>
+            <li>
+                <a href="operadores.html" class="">
+                    <img th:src="@{/img/solicitud.png}" alt="" class="icon">
+                    Solicitudes
+                </a>
+            </li>
+            <li>
+                <a href="operadores.html" class="">
+                    <img th:src="@{/img/help.png}" alt="" class="icon">
+                    Ayuda
+                </a>
+            </li>
+            <li>
+                <a href="operadores.html" class="">
+                    <img th:src="@{/img/config.png}" alt="" class="icon">
+                    Configuración
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <div>
+            <a href="operadores.html" class="">
+                <img th:src="@{/img/logout.png}" alt="" class="icon">
+                Logout
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content flex-grow-1">
+        <nav class="navbar">
+            <div class="bars-item">
+                <form class="d-flex">
+                    <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search">
+                </form>
+                <div class="d-flex align-items-center">
+                    <i class="fa-regular fa-bell campana"></i>
+                    <img th:src="@{/img/op1.jpg}" alt="User" class="profile">
+                </div>
+            </div>
+        </nav>
+
+        <!-- TABLE -->
+        <div class="content">
+            <table class="table table-borderless">
+                <thead>
+                <tr>
+                    <th scope="col">Perfil</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Iteración sobre la lista de operadores -->
+                <tr class="filas" th:each="operator : ${operators}">
+                    <th scope="row">
+                        <img th:src="@{/img/op1.jpg}" alt="User" class="profile">
+                    </th>
+                    <td th:text="${operator.id}">15035</td>
+                    <td th:text="${operator.name}">Neil Sims</td>
+                    <td th:text="${operator.email}">neil.sims@flowbite.com</td>
+                    <td th:text="${operator.cellphone}">999888777</td>
+                    <td th:text="${#dates.format(operator.timestamp, 'dd-MMM-yyyy')}">08-Dec-2021</td>
+                    <td th:text="${operator.status ? 'Activado' : 'Desactivado'}">Activado</td>
+                    <td>
+                        <button class="acciones" th:onclick="'editOperator(' + ${operator.id} + ')'">
+                            <i class="fa-solid fa-pen" style="color: #3f47e3;"></i>
+                        </button>
+                        <button class="acciones2" th:onclick="'deleteOperator(' + ${operator.id} + ')'">
+                            <i class="fa-solid fa-trash" style="color: #3f47e3;"></i>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
