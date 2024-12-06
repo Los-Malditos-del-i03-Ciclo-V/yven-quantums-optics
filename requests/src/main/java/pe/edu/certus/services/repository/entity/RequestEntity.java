@@ -1,4 +1,4 @@
-package pe.edu.certus.infrastructure.adapter.out;
+package pe.edu.certus.services.repository.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

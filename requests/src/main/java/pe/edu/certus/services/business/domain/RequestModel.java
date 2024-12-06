@@ -1,4 +1,4 @@
-package pe.edu.certus.domain.model;
+package pe.edu.certus.services.business.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class RequestPOJO {
+public class RequestModel {
 
     private Long id;
     private String category;

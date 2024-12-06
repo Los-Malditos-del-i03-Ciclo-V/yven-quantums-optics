@@ -1,16 +1,16 @@
-package pe.edu.certus.application.drivers.adapters;
+package pe.edu.certus.services.business.adapter.drivens;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import pe.edu.certus.application.drivens.port.ForManagingRequest;
-import pe.edu.certus.application.drivers.port.ForRequest;
-import pe.edu.certus.domain.model.RequestPOJO;
+import pe.edu.certus.services.business.domain.RequestModel;
+import pe.edu.certus.services.business.ports.drivens.ForManagingRequest;
+import pe.edu.certus.services.business.ports.drivers.ForRequest;
 
 import java.util.List;
 
 @Service
-public class RequestManager implements ForRequest<RequestPOJO, Long> {
+public class RequestManager implements ForRequest<RequestModel, Long> {
 
     private static final Logger logger = LoggerFactory.getLogger(RequestManager.class);
     private final ForManagingRequest forManagingRequest;
@@ -20,13 +20,13 @@ public class RequestManager implements ForRequest<RequestPOJO, Long> {
     }
 
     @Override
-    public void createRequestModel(RequestPOJO requestPOJO) {
+    public void createRequestModel(RequestModel requestModel) {
         try {
-            if (requestPOJO == null) {
+            if (requestModel == null) {
                 throw new IllegalArgumentException("Request model cannot be null");
             }
             logger.info("Creating new request model");
-            forManagingRequest.saveRequest(requestPOJO);
+            forManagingRequest.saveRequest(requestModel);
             logger.info("Request model created successfully");
         } catch (Exception e) {
             logger.error("Error creating request model: {}", e.getMessage());
@@ -35,13 +35,13 @@ public class RequestManager implements ForRequest<RequestPOJO, Long> {
     }
 
     @Override
-    public RequestPOJO findRequestModelById(Long id) {
+    public RequestModel findRequestModelById(Long id) {
         try {
             if (id == null) {
                 throw new IllegalArgumentException("ID cannot be null");
             }
             logger.info("Finding request model with ID: {}", id);
-            RequestPOJO request = forManagingRequest.getRequestById(id);
+            RequestModel request = forManagingRequest.getRequestById(id);
             if (request == null) {
                 logger.warn("No request model found with ID: {}", id);
                 throw new RuntimeException("Request not found");
@@ -54,10 +54,10 @@ public class RequestManager implements ForRequest<RequestPOJO, Long> {
     }
 
     @Override
-    public List<RequestPOJO> findAllRequestModel() {
+    public List<RequestModel> findAllRequestModel() {
         try {
             logger.info("Retrieving all request models");
-            List<RequestPOJO> requests = forManagingRequest.getAllRequests();
+            List<RequestModel> requests = forManagingRequest.getAllRequests();
             logger.info("Found {} request models", requests.size());
             return requests;
         } catch (Exception e) {
@@ -67,13 +67,13 @@ public class RequestManager implements ForRequest<RequestPOJO, Long> {
     }
 
     @Override
-    public RequestPOJO updateRequestModel(RequestPOJO requestPOJO) {
+    public RequestModel updateRequestModel(RequestModel requestModel) {
         try {
-            if (requestPOJO == null) {
+            if (requestModel == null) {
                 throw new IllegalArgumentException("Request model cannot be null");
             }
-            logger.info("Updating request model with ID: {}", requestPOJO.getId());
-            RequestPOJO updated = forManagingRequest.updateRequest(requestPOJO);
+            logger.info("Updating request model with ID: {}", requestModel.getId());
+            RequestModel updated = forManagingRequest.updateRequest(requestModel);
             logger.info("Request model updated successfully");
             return updated;
         } catch (Exception e) {

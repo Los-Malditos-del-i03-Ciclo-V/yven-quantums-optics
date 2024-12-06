@@ -1,12 +1,16 @@
-package pe.edu.certus.infrastructure.adapter;
+package pe.edu.certus.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import pe.edu.certus.application.drivers.adapters.RequestManager;
-import pe.edu.certus.application.drivers.port.ForRequest;
-import pe.edu.certus.application.drivens.port.ForManagingRequest;
+import org.springframework.context.annotation.Primary;
+import pe.edu.certus.services.business.adapter.drivens.RequestManager;
+import pe.edu.certus.services.business.ports.drivens.ForManagingRequest;
+import pe.edu.certus.services.business.ports.drivers.ForRequest;
 
+/**
+ * 
+ */
 @SpringBootApplication
 public class SpringAppConfig {
 
@@ -14,6 +18,7 @@ public class SpringAppConfig {
     ForManagingRequest forManagingRequest;
 
     @Bean
+    @Primary
     ForRequest forRequestModel() {
         return new RequestManager(forManagingRequest);
     }

@@ -1,11 +1,10 @@
-package pe.edu.certus.infrastructure.adapter.out;
+package pe.edu.certus.services.repository.ports.drivers;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import java.util.List;
+import pe.edu.certus.services.repository.entity.RequestEntity;
+
 
 @Repository
 public interface ForQueryingRequest extends JpaRepository<RequestEntity, Long> {
-    List<RequestEntity> findByCategory(String category);
-    List<RequestEntity> findByStatus(Boolean status);
 }

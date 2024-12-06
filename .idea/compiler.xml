@@ -8,6 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="yqosys" />
+        <module name="reports" />
+        <module name="operators" />
+        <module name="bootloader" />
+        <module name="requests" />
+        <module name="frontend" />
+        <module name="users" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,12 +31,17 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bootloader" options="-parameters" />
       <module name="domain" options="-parameters" />
+      <module name="frontend" options="-parameters" />
       <module name="logs" options="-parameters" />
       <module name="operadores" options="-parameters" />
+      <module name="operators" options="-parameters" />
       <module name="reportes" options="-parameters" />
+      <module name="reports" options="-parameters" />
       <module name="repository" options="-parameters" />
+      <module name="requests" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="solicitudes" options="-parameters" />
+      <module name="users" options="-parameters" />
       <module name="web" options="-parameters" />
       <module name="yqo" options="" />
     </option>

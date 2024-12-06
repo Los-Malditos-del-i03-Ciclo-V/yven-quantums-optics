@@ -1,20 +1,21 @@
-package pe.edu.certus.infrastructure.adapter.in;
+package pe.edu.certus.services.business.adapter.drivers;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.certus.application.drivers.port.ForRequest;
-import pe.edu.certus.domain.model.RequestPOJO;
+import pe.edu.certus.services.business.domain.RequestModel;
+import pe.edu.certus.services.business.ports.drivers.ForRequest;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/requests")
-public class RequestController {
+public class RequestAdapter {
 
     private final ForRequest forRequest;
 
-    public RequestController(ForRequest forRequest) {
+    public RequestAdapter(ForRequest forRequest) {
         this.forRequest = forRequest;
     }
 
@@ -25,7 +26,7 @@ public class RequestController {
                 return ResponseEntity.badRequest().build();
             }
             
-            RequestPOJO request = RequestWebModel.toDomainModel(requestWebModel);
+            RequestModel request = RequestWebModel.toDomainModel(requestWebModel);
             request.setStatus(request.getStatus() != null ? request.getStatus() : false);
 
             forRequest.createRequestModel(request);
@@ -45,7 +46,7 @@ public class RequestController {
                     continue;
                 }
                 
-                RequestPOJO request = RequestWebModel.toDomainModel(requestWebModel);
+                RequestModel request = RequestWebModel.toDomainModel(requestWebModel);
                 request.setStatus(request.getStatus() != null ? request.getStatus() : false);
 
                 forRequest.createRequestModel(request);
@@ -64,7 +65,7 @@ public class RequestController {
 
     @GetMapping("/query")
     public List<RequestWebModel> getAllRequests() {
-        List<RequestPOJO> requests = forRequest.findAllRequestModel();
+        List<RequestModel> requests = forRequest.findAllRequestModel();
         return requests.stream()
                 .map(RequestWebModel::fromDomainModel)
                 .toList();
@@ -72,7 +73,7 @@ public class RequestController {
 
     @GetMapping("/find/{id}")
     public ResponseEntity<RequestWebModel> getRequestById(@PathVariable Long id) {
-        RequestPOJO request = (RequestPOJO) forRequest.findRequestModelById(id);
+        RequestModel request = (RequestModel) forRequest.findRequestModelById(id);
         if (request == null) {
             return ResponseEntity.notFound().build();
         }
@@ -81,7 +82,7 @@ public class RequestController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteRequestBy(@PathVariable Long id) {
-        RequestPOJO request = (RequestPOJO) forRequest.findRequestModelById(id);
+        RequestModel request = (RequestModel) forRequest.findRequestModelById(id);
         if (request == null) {
             return ResponseEntity.notFound().build();
         }
@@ -91,16 +92,16 @@ public class RequestController {
     
     @PutMapping("/update/{id}")
     public ResponseEntity<RequestWebModel> updateRequest(@PathVariable Long id, @RequestBody RequestWebModel requestWebModel) {
-        RequestPOJO existingRequest = (RequestPOJO) forRequest.findRequestModelById(id);
+        RequestModel existingRequest = (RequestModel) forRequest.findRequestModelById(id);
         if (existingRequest == null) {
             return ResponseEntity.notFound().build();
         }
-        
-        RequestPOJO requestToUpdate = RequestWebModel.toDomainModel(requestWebModel);
+
+        RequestModel requestToUpdate = RequestWebModel.toDomainModel(requestWebModel);
 
         requestToUpdate.setId(id);
-        
-        RequestPOJO updatedRequest = (RequestPOJO) forRequest.updateRequestModel(requestToUpdate);
+
+        RequestModel updatedRequest = (RequestModel) forRequest.updateRequestModel(requestToUpdate);
 
         return ResponseEntity.ok(RequestWebModel.fromDomainModel(updatedRequest));
     }

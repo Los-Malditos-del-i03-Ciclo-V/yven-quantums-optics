@@ -1,9 +1,11 @@
-package pe.edu.certus.infrastructure.adapter.out;
+package pe.edu.certus.services.repository.adapters.drivens;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pe.edu.certus.application.drivens.port.ForManagingRequest;
-import pe.edu.certus.domain.model.RequestPOJO;
+import pe.edu.certus.services.business.domain.RequestModel;
+import pe.edu.certus.services.business.ports.drivens.ForManagingRequest;
+import pe.edu.certus.services.repository.entity.RequestEntity;
+import pe.edu.certus.services.repository.ports.drivers.ForQueryingRequest;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,26 +20,26 @@ public class RequestQuerierProxy implements ForManagingRequest {
 
     @Override
     @Transactional
-    public void saveRequest(RequestPOJO requestPOJO) {
-        forQueryingRequest.save(RequestMapper.toEntity(requestPOJO));
+    public void saveRequest(RequestModel requestModel) {
+        forQueryingRequest.save(RequestMapper.toEntity(requestModel));
     }
 
     @Override
-    public List<RequestPOJO> getAllRequests() {
+    public List<RequestModel> getAllRequests() {
         List<RequestEntity> requestEntities = forQueryingRequest.findAll();
         return RequestMapper.toModelEntities(requestEntities);
     }
 
     @Override
     @Transactional
-    public RequestPOJO updateRequest(RequestPOJO requestPOJO) {
-        RequestEntity requestEntity = RequestMapper.toEntity(requestPOJO);
+    public RequestModel updateRequest(RequestModel requestModel) {
+        RequestEntity requestEntity = RequestMapper.toEntity(requestModel);
         RequestEntity updatedEntity = forQueryingRequest.save(requestEntity);
         return RequestMapper.toModelEntity(updatedEntity);
     }
 
     @Override
-    public RequestPOJO getRequestById(Long id) {
+    public RequestModel getRequestById(Long id) {
         Optional<RequestEntity> requestEntity = forQueryingRequest.findById(id);
         return requestEntity.map(RequestMapper::toModelEntity).orElse(null);
     }
