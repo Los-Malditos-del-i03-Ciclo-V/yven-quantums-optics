@@ -1,0 +1,387 @@
+:root {
+    --secondary: #3f47e3;
+    --background: #F4F4F4;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--background);
+  }
+  
+  .logo {
+    height: 45px;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 1rem;
+    height: 100vh;
+    width: 220px;
+    background-color: white;
+  }
+  
+  .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    padding: 0;
+  }
+  
+  .list a {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0.50rem;
+    padding-bottom: 0.50rem;
+    padding-left: 1.25em;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 0.25rem;
+    font-weight: 600;
+  }
+  
+  .list a:hover {
+    background-color: rgb(233, 232, 232);
+    border-radius: 0.25rem;
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 1rem;
+  }
+  
+  .logout {
+    text-decoration: none;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.25em;
+
+  }
+  
+  .logout:hover {
+    background-color: rgb(233, 232, 232);
+    color: black;
+    border-radius: 0.25rem;
+  }
+  
+  .navbar {
+    height: 78px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    
+    
+    padding: 0 16px;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input{
+    margin-left: 16em;
+  }
+
+  .form-control{
+    width: 28em; 
+    height: 35px;
+    padding: 10px 12px;
+    border: none; 
+    border-radius: 20px;
+    background-color: #f4f4f4; 
+    transition: border-color 0.3s;
+  }
+  .bars-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+
+  .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .content {
+    padding: 16px;
+    background-color: var(--background);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  th{
+    font-weight: 500;
+  }
+  .campana{
+    margin-right: 1.25rem;
+  }
+
+  .acciones{
+    border: none;
+    background-color: white;
+  }
+
+  .acciones2{
+    border: none;
+    background-color: white;
+    margin-left: 1rem;
+  }
+
+  .filas{
+    border: 1px solid #E5E7EB;
+    background-color: white;
+    color: #6B7280 ;
+  }
+
+/* Container Viáticos */
+
+.container-chart {
+  align-items: center;
+  gap: 60px;
+  width: auto;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin: 0 0 30px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.chart-header h3 {
+  color: #666;
+  font-size: 1rem;
+}
+
+.chart-header p {
+  font-size: 1.5rem;
+
+  font-weight: 700;
+}
+
+.time-filters {
+  margin-top: 10px;
+}
+
+.time-filters button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.time-filters button.active {
+  background-color: #000000;
+  color: #fff;
+}
+
+.chart {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.y-axis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 300px;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.container-graphic {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 300px;
+  margin-left: 70px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+}
+
+
+.x-axis {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 90px;
+}
+
+.x-axis span {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+
+.sp-1, .sp-2, .sp-3 {
+  margin-right: 65px;
+}
+
+.sp-4, .sp-5, .sp-6 {
+  margin-right: 72px;
+}
+
+.div-line {
+  overflow: hidden;
+  height: 100%;
+  width: 2px;
+  background-color: rgb(211, 211, 211);
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.all-categorias {
+  border: 2px solid #6a78ff;
+  border-radius: 50px;
+  background-color: #6a79ff2d;
+  
+}
+
+.category-list > .all-categorias {
+  color: #000dff;
+} 
+
+.category-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-list li {
+  display: flex;
+  align-items: center;
+  padding: 6px 15px;
+  justify-items: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 50px;
+}
+
+.category-list .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.category-list .dot.purple {
+  border: 2px solid  #a794ff;
+}
+
+.category-list .dot.blue {
+  border: 2px solid #6a78ff;
+}
+
+.category-list .dot.light-purple {
+  border: 2px solid #d1b3ff;
+}
+
+.category-list .dot.light-blue {
+  border: 2px solid #94b8ff;
+}
+
+.percentage {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Container viaticos */
+
+
+.container-chart-2 {
+  align-items: center;
+  width: auto;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.title-viaticos {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+.container-row-viatico {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 15px;
+}
+
+.container-items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap:  40px;
+  border: 1px solid rgb(199, 199, 199);
+  align-items: center;
+  justify-items: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.function-items {
+  display: flex;
+}
+
+.items-a {
+  padding: 0 10px;
+}
+
+.icon-deledit {
+  color: var(--secondary);
+}
+
+.state > a {
+  text-decoration: none;
+  color: #000000;
+}
