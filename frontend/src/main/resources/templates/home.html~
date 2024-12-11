@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/css/viaticos.css}">
+  <title>YQO - Home</title>
+</head>
+<body>
+        <div class="d-flex">
+          <!-- Sidebar -->
+          <div class="sidebar">
+            <a href="#" class="">
+              <img th:src="@{/img/logo.svg}" class="logo">
+            </a>
+            <hr>
+            <ul class="list">
+              <li>
+                <a th:href="@{/}" aria-current="page">
+                  <img th:src="@{/img/casa1.svg}" alt="Icono" class="icon">
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a href="#" class="">
+                  <img th:src="@{/img/grafico.png}" alt="" class="icon">
+                  Reportes
+                </a>
+              </li>
+              <li>
+                <a th:href="@{/operators}" class="">
+                  <img th:src="@{/img/user.png}" alt="" class="icon">
+                  Operadores
+                </a>
+              </li>
+              <li>
+                <a th:href="@{/requests}" class="">
+                  <img th:src="@{/img/solicitud.png}" alt="" class="icon">
+                  Solicitudes
+                </a>
+              </li>
+              <li>
+                <a th:href="@{/requests/crear}">
+                  <img th:src="@{/img/solicitud.png}" alt="" class="icon">
+                  Crear Solicitud
+                </a>
+              </li>
+              <li>
+                <a th:href="@{/}" class="">
+                  <img th:src="@{/img/help.png}" alt="" class="icon">
+                  Ayuda
+                </a>
+              </li>
+              <li>
+                <a th:href="@{/}" class="">
+                  <img th:src="@{/img/config.png}" alt="" class="icon">
+                  Configuración
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div>
+              <a th:href="@{/}" class="logout">
+                <img th:src="@{/img/logout.png}" alt="" class="icon">
+                Logout
+              </a>
+            </div>
+          </div>
+
+          <div class="main-content flex-grow-1">
+            <nav class="navbar">
+              <div class="bars-item">
+                <form class="d-flex">
+                  <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search">
+                </form>
+                <div class="d-flex align-items-center">
+                    <i class="fa-regular fa-bell campana"></i>
+                    <img th:src="@{/img/op1.jpg}" alt="User" class="profile">
+
+                </div>
+              </div>
+            </nav>
+
+            <!-- TABLE -->
+            <div class="content">
+
+              <div class="container-chart">
+                <div class="main-graphic">
+                  <div class="chart-header">
+                    <div>
+                      <h3>Estadísticas</h3>
+                      <p>Resumen total de gastos</p>
+                    </div>
+                    <div class="time-filters">
+                      <button>Día</button>
+                      <button class="active">Semana</button>
+                      <button>Mes</button>
+                    </div>
+                  </div>
+                  <div class="chart">
+                    <div class="y-axis">
+                      <span>10000</span>
+                      <span>8000</span>
+                      <span>6000</span>
+                      <span>4000</span>
+                      <span>2000</span>
+                      <span>0</span>
+                    </div>
+                    <div class="container-graphic">
+                      <img th:src="@{/img/graphic_gastos.png}" alt="">
+                    </div>
+                    <div class="x-axis">
+                      <span class="sp-1">LUN</span>
+                      <span class="sp-2">MAR</span>
+                      <span class="sp-3">MIÉRC</span>
+                      <span class="sp-4">JUEV</span>
+                      <span class="sp-5">VIER</span>
+                      <span class="sp-6">SÁB</span>
+                      <span class="sp-7">DOM</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-line">
+
+                </div>
+                <div class="categories">
+                  <ul class="category-list">
+                    <li class="all-categorias">
+                      <span class="dot purple"></span>
+                      Todas las Categorías
+                    </li>
+                    <li>
+                      <span class="dot purple"></span>
+                      Capacitación - <span class="percentage">37%</span>
+                    </li>
+                    <li>
+                      <span class="dot blue"></span>
+                      Laboral - <span class="percentage">23%</span>
+                    </li>
+                    <li>
+                      <span class="dot light-purple"></span>
+                      Investigación - <span class="percentage">29%</span>
+                    </li>
+                    <li>
+                      <span class="dot light-blue"></span>
+                      Eventos - <span class="percentage">21%</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="container-chart-2">
+                <div class="contianer-viatic">
+                  <p class="title-viaticos">Ultimos Viáticos Registrados</p>
+                  <div class="container-row-viatico">
+                    <div th:each="viatico : ${ultimosViaticos}" class="container-items">
+                      <div>
+                        <span th:text="${viatico.id}">10321</span>
+                      </div>
+                      <div>
+                        <span th:text="${viatico.category}">Laboral</span>
+                      </div>
+                      <div>
+                        <span th:text="${viatico.description}">Viaje a...</span>
+                      </div>
+                      <div class="state">
+                        <span th:text="${viatico.status == true ? 'COMPLETADO' : 'PENDIENTE'}"
+                           th:class="${viatico.status == true ? 'text-success' : 'text-warning'}">
+                          Pendiente
+                        </span>
+                      </div>
+                      <div class="function-items">
+                        <div class="items-a">
+                          <a th:href="@{/requests/editar/{id}(id=${viatico.id})}"><i class="fa-solid fa-pencil icon-deledit"></i></a>
+                        </div>
+                        <div class="items-a">
+                          <a th:href="@{/requests/eliminar/{id}(id=${viatico.id})}"><i class="fa-solid fa-trash icon-deledit"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+</body>
+
+</html>

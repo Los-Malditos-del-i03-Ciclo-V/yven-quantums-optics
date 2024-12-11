@@ -4,6 +4,9 @@ import pe.edu.certus.services.business.model.OperatorModel;
 
 import java.sql.Timestamp;
 
+import lombok.Builder;
+
+@Builder
 public record OperatorWebModel(Long id,
                                String name,
                                String email,

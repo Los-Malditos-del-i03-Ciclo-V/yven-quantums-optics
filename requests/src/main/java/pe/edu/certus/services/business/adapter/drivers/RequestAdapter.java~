@@ -148,7 +148,7 @@ public class RequestAdapter {
                     requestToUpdate.getId(),
                     requestToUpdate.getStatus(),
                     requestToUpdate.getId(),
-                    requestToUpdate.getStatus() ? "APROBADA" : "RECHAZADA"
+                    requestToUpdate.getStatus() ? "C" : "RECHAZADA"
             );
             modelAndView.addObject("notificationScript", notificationScript);
         }

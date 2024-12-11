@@ -1,10 +1,8 @@
 package pe.edu.certus.services.business.adapter.drivers;
 
 
-import lombok.Builder;
 import pe.edu.certus.services.business.domain.RequestModel;
 
-@Builder
 public record RequestWebModel(Long id,
                               String category,
                               String description,

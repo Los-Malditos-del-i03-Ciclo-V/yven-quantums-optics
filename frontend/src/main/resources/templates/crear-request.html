@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Solicitud de Viático</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/viaticos.css}">
+    <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="d-flex">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <a href="#" class="">
+                    <img th:src="@{/img/logo.svg}" class="logo">
+                </a>
+                <hr>
+                <ul class="list">
+                    <li>
+                        <a th:href="@{/}">
+                            <img th:src="@{/img/casa1.svg}" alt="Icono" class="icon">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/}" class="">
+                            <img th:src="@{/img/grafico.png}" alt="" class="icon">
+                            Reportes
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/operators}" class="">
+                            <img th:src="@{/img/user.png}" alt="" class="icon">
+                            Operadores
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/requests}" class="active">
+                            <img th:src="@{/img/solicitud.png}" alt="" class="icon">
+                            Solicitudes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content flex-grow-1">
+                <nav class="navbar">
+                    <div class="bars-item">
+                        <form class="d-flex">
+                            <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search">
+                        </form>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-bell campana"></i>
+                            <img th:src="@{/img/op1.jpg}" alt="User" class="profile">
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Form Content -->
+                <div class="content">
+                    <div class="container mt-4">
+                        <h2 class="mb-4">Crear Nueva Solicitud de Viático</h2>
+                        <form th:action="@{/requests/crear}" th:object="${request}" method="post">
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Categoría</label>
+                                <select class="form-select" id="category" th:field="*{category}" required>
+                                    <option value="">Seleccionar Categoría</option>
+                                    <option value="Laboral">Laboral</option>
+                                    <option value="Capacitación">Capacitación</option>
+                                    <option value="Reunión">Reunión</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="description" th:field="*{description}" rows="3" required 
+                                          placeholder="Describe los detalles de tu solicitud de viático"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <p>Estado: <span class="text-warning">PENDIENTE</span> (por defecto)</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Crear Solicitud</button>
+                            <a th:href="@{/requests}" class="btn btn-secondary">Cancelar</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

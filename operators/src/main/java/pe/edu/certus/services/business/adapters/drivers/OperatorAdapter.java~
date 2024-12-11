@@ -139,6 +139,7 @@ public class OperatorAdapter {
     public String createOperatorWeb(OperatorWebModel operatorWebModel) {
         OperatorModel newOperator = OperatorWebModel.toDomainModel(operatorWebModel);
         
+        // Set default status to false
         newOperator.setStatus(false);
         
         forOperator.createOperatorModel(newOperator);

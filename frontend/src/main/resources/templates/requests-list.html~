@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes de Viáticos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/viaticos.css}">
+    <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="d-flex">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <a href="#" class="">
+                    <img th:src="@{/img/logo.svg}" class="logo">
+                </a>
+                <hr>
+                <ul class="list">
+                    <li>
+                        <a th:href="@{/}">
+                            <img th:src="@{/img/casa1.svg}" alt="Icono" class="icon">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/requests}" class="active">
+                            <img th:src="@{/img/solicitud.png}" alt="" class="icon">
+                            Solicitudes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content flex-grow-1">
+                <div class="header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between align-items-center">
+                                <div class="header-title">
+                                    <h1>Solicitudes de Viáticos</h1>
+                                </div>
+                                <div class="header-actions">
+                                    <div class="user">
+                                        <img th:src="@{/img/user.svg}" alt="Usuario">
+                                        <span>Administrador</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="title-section">
+                                    <h2>Todos los Viáticos</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-container">
+                                    <div th:each="request : ${requests}" class="card-item">
+                                        <div class="card-content">
+                                            <div>
+                                                <span th:text="${request.id}">10321</span>
+                                            </div>
+                                            <div>
+                                                <span th:text="${request.category}">Laboral</span>
+                                            </div>
+                                            <div>
+                                                <span th:text="${request.description}">Viaje a...</span>
+                                            </div>
+                                            <div class="state">
+                                                <span th:text="${request.status == true ? 'COMPLETADO' : 'PENDIENTE'}"
+                                                      th:class="${request.status == true ? 'text-success' : 'text-warning'}">
+                                                    Pendiente
+                                                </span>
+                                            </div>
+                                            <div class="function-items">
+                                                <div class="items-a">
+                                                    <a th:href="@{/requests/editar/{id}(id=${request.id})}">
+                                                        <i class="fa-solid fa-pencil icon-deledit"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="items-a">
+                                                    <a th:href="@{/requests/eliminar/{id}(id=${request.id})}" 
+                                                       onclick="return confirm('¿Estás seguro de eliminar esta solicitud?')">
+                                                        <i class="fa-solid fa-trash icon-deledit"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li>
-                <a th:href="@{/requests}" class="">
+                <a th:href="@{/operators}" class="">
                     <img th:src="@{/img/solicitud.png}" alt="" class="icon">
                     Solicitudes
                 </a>
